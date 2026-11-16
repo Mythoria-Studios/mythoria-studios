@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #100e18;
@@ -74,6 +78,25 @@ nav a {
   color: #d0c6dc;
 }
 
+.button {
+  display: inline-block;
+  padding: 15px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 5px;
+}
+
+.download-button {
+  background: #7c4caa;
+  color: white;
+}
+
+.bestiary-button {
+  background: #e5bd70;
+  color: #17111f;
+}
+
 section {
   padding: 55px 7%;
 }
@@ -110,30 +133,26 @@ h2 {
   margin-bottom: 10px;
 }
 
-.download-area {
-  max-width: 700px;
+.download-area,
+.reader-area {
+  max-width: 900px;
   margin: auto;
   text-align: center;
   background: #1c1728;
   border: 1px solid #76539b;
   border-radius: 15px;
-  padding: 35px 20px;
+  padding: 25px 18px;
 }
 
-.download-area h3 {
-  color: #e5bd70;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.download-area p {
+.download-area p,
+.reader-area p {
   color: #d0c6dc;
 }
 
 .install-button {
   display: block;
   max-width: 350px;
-  margin: 25px auto 12px;
+  margin: 22px auto;
   padding: 17px 15px;
   background: #7c4caa;
   color: white;
@@ -144,13 +163,21 @@ h2 {
   border: 2px solid #b58bd8;
 }
 
-.install-button:hover {
-  background: #9566c2;
+.pdf-viewer {
+  width: 100%;
+  height: 75vh;
+  min-height: 450px;
+  margin-top: 20px;
+  border: 1px solid #49375d;
+  border-radius: 8px;
+  background: white;
 }
 
-.file-info {
-  font-size: 14px;
+.open-pdf {
+  display: inline-block;
   margin-top: 18px;
+  color: #e5bd70;
+  text-decoration: underline;
 }
 
 .back {
@@ -183,6 +210,7 @@ footer {
     <a href="../">Início</a>
     <a href="#sobre">Sobre</a>
     <a href="#criaturas">Criaturas</a>
+    <a href="#bestiario">Bestiário</a>
     <a href="#download">Download</a>
   </nav>
 </header>
@@ -195,6 +223,16 @@ footer {
     Explore um mundo repleto de dragões, criaturas misteriosas,
     estruturas ancestrais e poderes elementais.
   </p>
+
+  <a class="button download-button"
+     href="https://www.mediafire.com/file/4n40it3aynrjoma/MaDBETA.mcaddon/file"
+     target="_blank" rel="noopener noreferrer">
+    ⬇ BAIXAR E INSTALAR
+  </a>
+
+  <a class="button bestiary-button" href="#bestiario">
+    📖 CONSULTAR BESTIÁRIO
+  </a>
 </div>
 
 <section id="sobre">
@@ -235,8 +273,33 @@ footer {
   </div>
 </section>
 
+<section id="bestiario">
+  <h2>O Bestiário — Volume I</h2>
+
+  <div class="reader-area">
+    <h3>Enciclopédia de Monsters and Dragons</h3>
+
+    <p>
+      Consulte o bestiário completo, conheça as espécies
+      catalogadas e descubra mais sobre o universo do addon.
+    </p>
+
+    <iframe
+      class="pdf-viewer"
+      src="O_Bestiario_Monsters_and_Dragons_Volume_I_Artes_Completas.pdf"
+      title="Bestiário completo de Monsters and Dragons">
+    </iframe>
+
+    <a class="open-pdf"
+       href="O_Bestiario_Monsters_and_Dragons_Volume_I_Artes_Completas.pdf"
+       target="_blank" rel="noopener noreferrer">
+      Abrir Bestiário em tela cheia
+    </a>
+  </div>
+</section>
+
 <section id="download">
-  <h2>Instale o addon</h2>
+  <h2>Download</h2>
 
   <div class="download-area">
     <h3>Monsters and Dragons — BETA</h3>
@@ -245,15 +308,13 @@ footer {
       Prepare-se para explorar o universo de Monsters and Dragons!
     </p>
 
-    <a
-      class="install-button"
-      href="https://www.mediafire.com/file/4n40it3aynrjoma/MaDBETA.mcaddon/file"
-      target="_blank"
-      rel="noopener noreferrer">
+    <a class="install-button"
+       href="https://www.mediafire.com/file/4n40it3aynrjoma/MaDBETA.mcaddon/file"
+       target="_blank" rel="noopener noreferrer">
       ⬇ BAIXAR E INSTALAR
     </a>
 
-    <p class="file-info">
+    <p>
       Arquivo: MaDBETA.mcaddon<br>
       Plataforma: Minecraft Bedrock Edition<br>
       Versão: Beta
