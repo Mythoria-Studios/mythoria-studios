@@ -2,309 +2,273 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monsters and Dragons | Mythoria Studios</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monsters and Dragons | Mythoria Studios</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #100e18;
+  color: #f4f0fa;
+  line-height: 1.6;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #100e18;
-      color: #f4f0fa;
-      line-height: 1.6;
-    }
+header {
+  background: #191525;
+  padding: 16px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #49375d;
+}
 
-    header {
-      background: #191525;
-      padding: 16px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      border-bottom: 1px solid #49375d;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e5bd70;
+  font-weight: bold;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #e5bd70;
-      font-weight: bold;
-    }
+.brand img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 50%;
+}
 
-    .brand img {
-      width: 45px;
-      height: 45px;
-      object-fit: contain;
-      border-radius: 50%;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+nav a {
+  color: #eee5f7;
+  text-decoration: none;
+}
 
-    nav a {
-      color: #eee5f7;
-      text-decoration: none;
-    }
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+  background: linear-gradient(135deg, #351b28, #171321);
+}
 
-    nav a:hover {
-      color: #e5bd70;
-    }
+.hero h1 {
+  color: #e5bd70;
+  font-size: clamp(30px, 7vw, 50px);
+}
 
-    .hero {
-      text-align: center;
-      padding: 85px 20px;
-      background: linear-gradient(135deg, #351b28, #171321);
-    }
+.hero p {
+  max-width: 650px;
+  margin: 15px auto;
+  color: #d0c6dc;
+}
 
-    .hero h1 {
-      color: #e5bd70;
-      font-size: clamp(32px, 7vw, 52px);
-      margin-bottom: 15px;
-    }
+section {
+  padding: 55px 7%;
+}
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #d0c6dc;
-    }
+h2 {
+  color: #e5bd70;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
 
-    .button {
-      display: inline-block;
-      background: #e5bd70;
-      color: #17111f;
-      padding: 13px 24px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
+.content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #d0c6dc;
+}
 
-    .button:hover {
-      background: #f3d394;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
 
-    .download-button {
-      background: #7c4caa;
-      color: white;
-      font-size: 17px;
-      padding: 16px 28px;
-    }
+.card {
+  background: #1c1728;
+  border: 1px solid #49375d;
+  border-radius: 12px;
+  padding: 22px;
+}
 
-    .download-button:hover {
-      background: #9566c2;
-    }
+.card h3 {
+  color: #e5bd70;
+  margin-bottom: 10px;
+}
 
-    section {
-      padding: 60px 7%;
-    }
+.download-area {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: #1c1728;
+  border: 1px solid #76539b;
+  border-radius: 15px;
+  padding: 35px 20px;
+}
 
-    section h2 {
-      color: #e5bd70;
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 25px;
-    }
+.download-area h3 {
+  color: #e5bd70;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-    .content {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      color: #d0c6dc;
-    }
+.download-area p {
+  color: #d0c6dc;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.install-button {
+  display: block;
+  max-width: 350px;
+  margin: 25px auto 12px;
+  padding: 17px 15px;
+  background: #7c4caa;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 9px;
+  border: 2px solid #b58bd8;
+}
 
-    .card {
-      background: #1c1728;
-      border: 1px solid #49375d;
-      border-radius: 12px;
-      padding: 25px;
-    }
+.install-button:hover {
+  background: #9566c2;
+}
 
-    .card h3 {
-      color: #e5bd70;
-      margin-bottom: 10px;
-    }
+.file-info {
+  font-size: 14px;
+  margin-top: 18px;
+}
 
-    .download-area {
-      text-align: center;
-      background: #1b1527;
-      border: 1px solid #49375d;
-      border-radius: 14px;
-      max-width: 750px;
-      margin: auto;
-      padding: 35px 20px;
-    }
+.back {
+  display: block;
+  text-align: center;
+  color: #e5bd70;
+  margin: 25px;
+  text-decoration: none;
+}
 
-    .download-area h3 {
-      color: #e5bd70;
-      font-size: 23px;
-      margin-bottom: 12px;
-    }
-
-    .download-area p {
-      color: #d0c6dc;
-    }
-
-    .version {
-      color: #c7a4ed;
-      margin-top: 15px;
-      font-size: 14px;
-    }
-
-    .back {
-      display: block;
-      text-align: center;
-      margin: 25px;
-      color: #e5bd70;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #191525;
-      color: #a99bb8;
-      border-top: 1px solid #49375d;
-    }
-  </style>
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #191525;
+  color: #a99bb8;
+  border-top: 1px solid #49375d;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="brand">
-      <img src="../logo-mythoria.jpg" alt="Mythoria Studios">
-      <span>MYTHORIA STUDIOS</span>
+<header>
+  <div class="brand">
+    <img src="../logo-mythoria.jpg" alt="Mythoria Studios">
+    <span>MYTHORIA STUDIOS</span>
+  </div>
+
+  <nav>
+    <a href="../">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#criaturas">Criaturas</a>
+    <a href="#download">Download</a>
+  </nav>
+</header>
+
+<main>
+
+<div class="hero">
+  <h1>MONSTERS AND DRAGONS</h1>
+  <p>
+    Explore um mundo repleto de dragões, criaturas misteriosas,
+    estruturas ancestrais e poderes elementais.
+  </p>
+</div>
+
+<section id="sobre">
+  <h2>Sobre o projeto</h2>
+  <div class="content">
+    <p>
+      Monsters and Dragons é um addon para Minecraft Bedrock
+      desenvolvido pela Mythoria Studios. Descubra criaturas únicas,
+      explore regiões corrompidas e desvende os segredos
+      de um mundo transformado pelos dragões.
+    </p>
+  </div>
+</section>
+
+<section id="criaturas">
+  <h2>O que você encontrará</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Dragões elementais</h3>
+      <p>Criaturas com poderes ligados a diferentes elementos.</p>
     </div>
 
-    <nav>
-      <a href="../">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#criaturas">Criaturas</a>
-      <a href="#download">Download</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <div class="hero">
-      <h1>MONSTERS AND DRAGONS</h1>
-      <p>
-        Explore um mundo repleto de dragões, criaturas misteriosas,
-        estruturas ancestrais e poderes elementais.
-        Sua aventura está apenas começando.
-      </p>
-      <a class="button" href="#download">Baixar addon</a>
+    <div class="card">
+      <h3>Dragões ancestrais</h3>
+      <p>Seres antigos que guardam segredos e desafios.</p>
     </div>
 
-    <section id="sobre">
-      <h2>Sobre o projeto</h2>
-      <div class="content">
-        <p>
-          Monsters and Dragons é um addon para Minecraft Bedrock
-          desenvolvido pela Mythoria Studios.
-          Descubra criaturas únicas, explore regiões corrompidas,
-          encontre estruturas antigas e desvende os segredos
-          de um mundo transformado pelos dragões.
-        </p>
-      </div>
-    </section>
+    <div class="card">
+      <h3>Estruturas misteriosas</h3>
+      <p>Explore ninhos, ruínas e lugares esquecidos.</p>
+    </div>
 
-    <section id="criaturas">
-      <h2>O que você encontrará</h2>
+    <div class="card">
+      <h3>Novos equipamentos</h3>
+      <p>Descubra itens, materiais e possibilidades de criação.</p>
+    </div>
+  </div>
+</section>
 
-      <div class="cards">
+<section id="download">
+  <h2>Instale o addon</h2>
 
-        <div class="card">
-          <h3>Dragões elementais</h3>
-          <p>
-            Criaturas com poderes e habilidades ligados
-            a diferentes elementos.
-          </p>
-        </div>
+  <div class="download-area">
+    <h3>Monsters and Dragons — BETA</h3>
 
-        <div class="card">
-          <h3>Dragões ancestrais</h3>
-          <p>
-            Seres antigos que guardam segredos e desafios
-            do mundo.
-          </p>
-        </div>
+    <p>
+      Prepare-se para explorar o universo de Monsters and Dragons!
+    </p>
 
-        <div class="card">
-          <h3>Estruturas misteriosas</h3>
-          <p>
-            Explore ninhos, ruínas e lugares esquecidos
-            pela história.
-          </p>
-        </div>
+    <a
+      class="install-button"
+      href="https://www.mediafire.com/file/4n40it3aynrjoma/MaDBETA.mcaddon/file"
+      target="_blank"
+      rel="noopener noreferrer">
+      ⬇ BAIXAR E INSTALAR
+    </a>
 
-        <div class="card">
-          <h3>Novos equipamentos</h3>
-          <p>
-            Descubra itens, materiais e possibilidades
-            de criação.
-          </p>
-        </div>
+    <p class="file-info">
+      Arquivo: MaDBETA.mcaddon<br>
+      Plataforma: Minecraft Bedrock Edition<br>
+      Versão: Beta
+    </p>
+  </div>
+</section>
 
-      </div>
-    </section>
+</main>
 
-    <section id="download">
-      <h2>Download</h2>
+<a class="back" href="../">← Voltar para Mythoria Studios</a>
 
-      <div class="download-area">
-        <h3>Monsters and Dragons — BETA</h3>
-
-        <p>
-          Baixe a versão beta do addon e explore
-          o universo de Monsters and Dragons.
-        </p>
-
-        <a
-          class="button download-button"
-          href="https://www.mediafire.com/file/4n40it3aynrjoma/MaDBETA.mcaddon/file"
-          target="_blank"
-          rel="noopener noreferrer">
-          BAIXAR AGORA
-        </a>
-
-        <p class="version">
-          Arquivo: MaDBETA.mcaddon<br>
-          Plataforma: Minecraft Bedrock Edition<br>
-          Versão: Beta
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <a class="back" href="../">← Voltar para Mythoria Studios</a>
-
-  <footer>
-    <p>© 2026 Mythoria Studios. Todos os direitos reservados.</p>
-    <p>Monsters and Dragons — Um mundo além da imaginação.</p>
-  </footer>
+<footer>
+  <p>© 2026 Mythoria Studios. Todos os direitos reservados.</p>
+  <p>Monsters and Dragons — Um mundo além da imaginação.</p>
+</footer>
 
 </body>
 </html>
